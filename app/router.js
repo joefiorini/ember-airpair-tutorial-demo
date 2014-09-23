@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('releases', {path: '/:owner/:repo/releases'});
+  this.resource('releases', {path: '/:owner/:repo/releases'}, function() {
+    this.route('show', {path: '/:release_id'});
+  });
 });
 
 export default Router;

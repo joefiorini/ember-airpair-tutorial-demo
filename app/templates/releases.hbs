@@ -2,8 +2,13 @@
   <div class="large-2 columns">
     <ul class="side-nav">
       {{#each}}
-      <li>{{tag_name}}</li>
+        <li>{{link-to tag_name "releases.show" this}}</li>
       {{/each}}
     </ul>
   </div>
+
+  <div class="large-10 columns end">
+    {{outlet}}
+  </div>
+
 </div>
