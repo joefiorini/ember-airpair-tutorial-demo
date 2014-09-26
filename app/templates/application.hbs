@@ -1,3 +1,22 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1>{{link-to "Releasy" "index"}}</h1>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      <li class="divider"></li>
+      <li>
+        {{#if currentRepo.name}}
+          {{#link-to 'releases' currentRepo.owner currentRepo.name}}
+          {{currentRepo.owner}}/{{currentRepo.name}}
+          {{/link-to}}
+        {{/if}}
+      </li>
+    </ul>
+  </section>
+</nav>
 
 {{outlet}}

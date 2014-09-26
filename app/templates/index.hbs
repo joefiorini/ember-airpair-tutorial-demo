@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="large-10 large-centered columns clearfix">
+    <h2>Choose a repo to browse its releases</h2>
+    <ul>
+      {{#each controller}}
+      <li>
+        <a {{bind-attr href="url"}}>{{name}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
